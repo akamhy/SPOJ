@@ -12,21 +12,25 @@ int main() {
     while (1) {
 
         int packets = 0;
-
         std::cin >> packets;
+
         if (packets == -1) {
             break;
         }
+
         // std::cout << packets << std::endl;
+
         std::vector<int> packet_list;
         int sum = 0;
         int packet_count = 0;
+
         for (int i = 0; i<packets; i++) {
             int packet;
             std::cin >> packet;
             sum += packet;
             packet_count += 1;
             packet_list.push_back(packet);
+
             // std::cout << "packet " << packet << std::endl;
             }
 
@@ -40,8 +44,7 @@ int main() {
         int candy_per_packet = sum / packets;
 
         for (auto i = packet_list.begin(); i != packet_list.end(); ++i) {
-            int klmn = *i;  
-            int diff = candy_per_packet - klmn;
+            int diff = candy_per_packet - *i;
             if ( diff > 0 ) {
                 moves += diff;
             }
