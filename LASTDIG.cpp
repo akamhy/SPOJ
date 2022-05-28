@@ -12,7 +12,8 @@ int get_last_digit(int num) {
 }
 
 int main() {
-
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int cases;
     cin >> cases;
 
